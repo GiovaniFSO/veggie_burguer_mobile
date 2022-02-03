@@ -31,7 +31,7 @@ class LoginPage extends StatelessWidget {
                       'Login',
                       style: context.textTheme.headline6?.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: context.theme.primaryColor),
+                          color: context.theme.primaryColorDark),
                     ),
                     const SizedBox(
                       height: 30,
@@ -55,7 +55,9 @@ class LoginPage extends StatelessWidget {
                       children: [
                         const Text('Não possui uma conta?'),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.toNamed('/auth/register');
+                          },
                           child: const Text(
                             'Cadastre-se',
                             style: VeggieUi.textBold,
