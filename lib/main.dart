@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:veggie_burguer_mobile/app/core/ui/veggie_ui.dart';
+import 'package:veggie_burguer_mobile/app/routes/auth_routers.dart';
 import 'package:veggie_burguer_mobile/app/routes/splash_routes.dart';
 
 void main() {
@@ -16,7 +17,8 @@ class VeggieBurguerMainApp extends StatelessWidget {
       title: 'Veggie Burger',
       theme: VeggieUi.theme,
       getPages: [
-        ...SplashRoutes.routers
+        ...SplashRoutes.routers,
+        ...AuthRouters.routers
       ],
     );
   }
