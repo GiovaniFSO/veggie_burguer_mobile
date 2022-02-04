@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:veggie_burguer_mobile/app/core/ui/veggie_ui.dart';
 import 'package:veggie_burguer_mobile/app/core/ui/widgets/veggie_app_bar.dart';
 import 'package:veggie_burguer_mobile/app/core/ui/widgets/veggie_button.dart';
 import 'package:veggie_burguer_mobile/app/core/ui/widgets/veggie_textformfield.dart';
