@@ -16,56 +16,58 @@ class LoginPage extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
       body: LayoutBuilder(builder: (_, constraints) {
-        return ConstrainedBox(
-          constraints: BoxConstraints(
-            minHeight: constraints.maxHeight,
-          ),
-          child: IntrinsicHeight(
-            child: Form(
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Login',
-                      style: context.textTheme.headline6?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: context.theme.primaryColorDark),
-                    ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    const VeggieTextformfield(label: 'E-mail'),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    const VeggieTextformfield(label: 'Senha'),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    Center(
-                        child: VeggieButton(
-                            width: context.width,
-                            label: 'ENTRAR',
-                            onPressed: () {})),
-                    const Spacer(),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text('Não possui uma conta?'),
-                        TextButton(
-                          onPressed: () {
-                            Get.toNamed('/auth/register');
-                          },
-                          child: const Text(
-                            'Cadastre-se',
-                            style: VeggieUi.textBold,
-                          ),
-                        )
-                      ],
-                    )
-                  ],
+        return SingleChildScrollView(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              minHeight: constraints.maxHeight,
+            ),
+            child: IntrinsicHeight(
+              child: Form(
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Login',
+                        style: context.textTheme.headline6?.copyWith(
+                            fontWeight: FontWeight.bold,
+                            color: context.theme.primaryColorDark),
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      const VeggieTextformfield(label: 'E-mail'),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      const VeggieTextformfield(label: 'Senha'),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      Center(
+                          child: VeggieButton(
+                              width: context.width,
+                              label: 'ENTRAR',
+                              onPressed: () {})),
+                      const Spacer(),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text('Não possui uma conta?'),
+                          TextButton(
+                            onPressed: () {
+                              Get.toNamed('/auth/register');
+                            },
+                            child: const Text(
+                              'Cadastre-se',
+                              style: VeggieUi.textBold,
+                            ),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
