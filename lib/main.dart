@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:veggie_burguer_mobile/app/core/bindings/application_binding.dart';
 import 'package:veggie_burguer_mobile/app/core/ui/veggie_ui.dart';
 import 'package:veggie_burguer_mobile/app/routes/auth_routers.dart';
 import 'package:veggie_burguer_mobile/app/routes/splash_routes.dart';
@@ -16,6 +17,7 @@ class VeggieBurguerMainApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Veggie Burger',
       theme: VeggieUi.theme,
+      initialBinding: ApplicationBinding(),
       getPages: [
         ...SplashRoutes.routers,
         ...AuthRouters.routers
