@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:veggie_burguer_mobile/app/core/ui/widgets/veggie_button.dart';
+import 'package:veggie_burguer_mobile/app/modules/splash/splash_controller.dart';
 
-class SplashPage extends StatelessWidget {
+class SplashPage extends GetView<SplashController> {
   const SplashPage({Key? key}) : super(key: key);
 
   @override
@@ -35,9 +36,7 @@ class SplashPage extends StatelessWidget {
                   label: 'Acessar',
                   width: context.widthTransformer(reducedBy: 40),
                   height: 45,
-                  onPressed: () {
-                    Get.toNamed('/auth/login');
-                  },
+                  onPressed: () => controller.checkLogged(),
                 )
               ],
             ),

@@ -18,7 +18,7 @@ class AuthService extends GetxService {
 
     ever<bool?>(_isLogged, (isLogged){
       if(isLogged == null || !isLogged){
-        Get.off('/auth/login');
+        Get.offAllNamed('/auth/login');
       }else{
         Get.offAllNamed('/home');
       }
